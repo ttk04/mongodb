@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "ext-mongo": "^1.2.12",
+        "ext-mongodb": "^1.1.2",
         "doctrine/common": "^2.2"
     },
     "require-dev": {
