@@ -1,5 +1,5 @@
 {
-    "name": "doctrine/mongodb",
+    "name": "ttk04/mongodb",
     "type": "library",
     "description": "Doctrine MongoDB Abstraction Layer",
     "keywords": ["database", "persistence", "mongodb"],
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "ext-mongo": ">=1.2.12,<1.7-dev",
+        "ext-mongodb": "^1.1.2",
         "doctrine/common": "~2.1"
     },
     "require-dev": {
