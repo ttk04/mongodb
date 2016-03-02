@@ -79,7 +79,7 @@ class Connection
      */
     public function __construct($server = null, array $options = array(), Configuration $config = null, EventManager $evm = null)
     {
-        if ($server instanceof \MongoClient || $server instanceof \Mongo) {
+        if ($server instanceof \MongoClient || $server instanceof \MongoDB) {
             $this->mongoClient = $server;
         } else {
             $this->server = $server;
@@ -181,8 +181,8 @@ class Connection
      */
     public function setMongo($mongoClient)
     {
-        if ( ! ($mongoClient instanceof \MongoClient || $mongoClient instanceof \Mongo)) {
-            throw new \InvalidArgumentException('MongoClient or Mongo instance required');
+        if ( ! ($mongoClient instanceof \MongoClient || $mongoClient instanceof \MongoDB)) {
+            throw new \InvalidArgumentException('MongoClient or MongoDB instance required');
         }
 
         $this->mongoClient = $mongoClient;
@@ -251,7 +251,7 @@ class Connection
     public function getStatus()
     {
         $this->initialize();
-        if ( ! ($this->mongoClient instanceof \MongoClient || $this->mongoClient instanceof \Mongo)) {
+        if ( ! ($this->mongoClient instanceof \MongoClient || $this->mongoClient instanceof \MongoDB)) {
             return null;
         }
 
@@ -297,7 +297,7 @@ class Connection
      */
     public function isConnected()
     {
-        if ( ! ($this->mongoClient instanceof \MongoClient || $this->mongoClient instanceof \Mongo)) {
+        if ( ! ($this->mongoClient instanceof \MongoClient || $this->mongoClient instanceof \MongoDB)) {
             return false;
         }
 

@@ -4,7 +4,7 @@ namespace Doctrine\MongoDB\Tests;
 
 use Doctrine\MongoDB\Connection;
 use PHPUnit_Framework_TestCase;
-use Mongo;
+use MongoDB;
 
 class ConnectionTest extends PHPUnit_Framework_TestCase
 {
@@ -229,7 +229,7 @@ class ConnectionTest extends PHPUnit_Framework_TestCase
 
     private function getMockMongo()
     {
-        return $this->getMock('Mongo', array(), array(), '', false, false);
+        return $this->getMock('MongoDB', array(), array(), '', false, false);
     }
 
     private function getMockMongoClient()
